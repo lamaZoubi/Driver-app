@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Autobice">
         <activity android:name=".Utils.MachineRegistration"></activity>
-        <activity android:name=".Views.Activities.login" />
+        <activity android:name=".Views.Activities.Login" />
         <activity android:name=".Views.Activities.MainActivity" />
         <activity android:name=".Views.Activities.singup" />
         <activity android:name=".Views.Activities.SplashActivity">

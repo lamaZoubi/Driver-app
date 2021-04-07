@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".singup">
+    tools:context=".Views.Activities.singup">
     <ProgressBar
         android:id="@+id/pro"
         app:layout_constraintTop_toTopOf="parent"
