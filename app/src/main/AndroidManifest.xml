@@ -8,10 +8,11 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Autobice">
-        <activity android:name=".Utils.MachineRegistration"></activity>
+        <activity android:name=".Views.Activities.MachineRegistration"></activity>
         <activity android:name=".Views.Activities.Login" />
         <activity android:name=".Views.Activities.MainActivity" />
         <activity android:name=".Views.Activities.singup" />
