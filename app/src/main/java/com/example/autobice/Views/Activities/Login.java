@@ -11,7 +11,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.autobice.Models.LoginMessage;
-import com.example.autobice.Models.SigupMessage;
 import com.example.autobice.R;
 import com.example.autobice.Utils.NetworkOperation;
 
@@ -23,8 +22,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class Login extends AppCompatActivity {
- EditText edEmail1 , edPassword1;
- Button btLogin;
+    EditText edEmail1 , edPassword1;
+    Button btLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,16 +58,16 @@ public class Login extends AppCompatActivity {
                 call.enqueue(new Callback<LoginMessage>() {
                     @Override
                     public void onResponse(Call<LoginMessage> call, Response<LoginMessage> response) {
-                      LoginMessage message = response.body();
-                      if (message.getCode()>0){
+                        LoginMessage message = response.body();
+                        if (message.getCode()>0){
 
-                          Toast.makeText(Login.this , message.getCode(),Toast.LENGTH_SHORT).show();
-                          Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                          startActivity(intent);
-                          finish();
-                      }
-                      else
-                         Toast.makeText(Login.this,message.getCode(),Toast.LENGTH_LONG).show();
+                            Toast.makeText(Login.this , message.getCode()+"",Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                            startActivity(intent);
+                            finish();
+                        }
+                        else
+                            Toast.makeText(Login.this,message.getCode()+"",Toast.LENGTH_LONG).show();
                     }
 
                     @Override
@@ -83,5 +82,11 @@ public class Login extends AppCompatActivity {
         }
         else
             Toast.makeText(this, "missing  feild is requred", Toast.LENGTH_SHORT).show();
+    }
+
+    public void goToSingup(View view) {
+        Intent intent = new Intent(getApplicationContext(), Singup.class);
+        startActivity(intent);
+        finish();
     }
 }

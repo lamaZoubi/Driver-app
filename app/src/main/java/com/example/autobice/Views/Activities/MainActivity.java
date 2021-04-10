@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openSingup(View view) {
-        Intent intent = new Intent(getApplicationContext(), singup.class);
+        Intent intent = new Intent(getApplicationContext(), Singup.class);
         startActivity(intent);
         finish();
     }

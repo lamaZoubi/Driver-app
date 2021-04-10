@@ -23,7 +23,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class singup extends AppCompatActivity {
+public class Singup extends AppCompatActivity {
     EditText edFirstName, edLastName, edEmail, edPassword, edPhoneNumber;
     Button buttonSingup;
     ProgressBar pro;
@@ -69,14 +69,14 @@ public class singup extends AppCompatActivity {
                     SigupMessage sg=response.body();
                     if(sg.getCode()>0){
                         //Sucree
-                        Toast.makeText(singup.this,sg.getMessageData().getName() , Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(getApplicationContext(), MachineRegistration.class);
-//                        startActivity(intent);
-//                        finish();
+                        Toast.makeText(Singup.this,sg.getMessageData().getName()+"" , Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(),MachineRegistration.class);
+                       startActivity(intent);
+                       finish();
 
                     }else{
                         //Fail
-                        Toast.makeText(singup.this, "Fail", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Singup.this, "Fail", Toast.LENGTH_SHORT).show();
                     }
                     Log.d("Mariooo",sg.getCode()+"");
                     Log.d("Mariooo",sg.getMessage());
@@ -132,4 +132,10 @@ public class singup extends AppCompatActivity {
         }
     }
 
+    public void goToSingin(View view) {
+
+        Intent intent = new Intent(getApplicationContext(),Login.class);
+        startActivity(intent);
+        finish();
+    }
 }

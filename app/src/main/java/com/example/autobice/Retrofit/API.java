@@ -26,6 +26,6 @@ public interface API {
     Call<RegisterMessage> SaveMachine(@FieldMap Map<String, String> params);
 
     @FormUrlEncoded
-    @GET("login")
+    @POST("login")
     Call<LoginMessage> login (@FieldMap Map<String, String> params);
 }
